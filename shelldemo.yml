@@ -9,6 +9,8 @@ spec:
   containers:
   - name: nginx
     image: nginx
+    securityContext:
+     privileged: true
     volumeMounts:
     - name: shared-data
       mountPath: /usr/share/nginx/html
